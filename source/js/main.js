@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+// import {Form} from './modules/form-validate/form';
+import {initSwiperHero} from "./modules/swiper-hero/swiper-hero.js";
+import {initVideo} from "./modules/video.js";
 
 // ---------------------------------
 
@@ -17,10 +18,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
+    initSwiperHero();
+    initVideo();
+
+    const header = document.querySelector('.header');
+    const button = header.querySelector('.header__burger');
+    button.addEventListener('click', () => header.classList.toggle('header--nav-opened'));
   });
 });
 

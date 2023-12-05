@@ -1,11 +1,252 @@
 .hero {
 
-  img {
-    width: 100%;
+  .swiper-container {
+    overflow: hidden;
     position: relative;
-    z-index: -1;
-    object-fit: cover;
-    margin-top: -127px;
-    height: 100%;
+    top: -133px;
+  }
+
+  .swiper-slide {
+    padding: 184px 120px 80px;
+    min-height: 800px;
+
+    @include vp-767 {
+      min-height: 568px;
+    }
+
+    .hero__slide-info {
+      width: 1200px;
+      margin: 0 auto;
+
+      @include vp-1199 {
+        width: 100%;
+      }
+    }
+
+    .hero__img-main {
+
+      img {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @include vp-1199 {
+      padding: 220px 42px 40px;
+    }
+
+    @include vp-767 {
+      padding: 180px 15px 40px;
+      object-fit: fill;
+    }
+  }
+
+  .hero__slide-title {
+    color: $color-default-white;
+    font-size: 77px;
+    line-height: 77px;
+    font-weight: 800;
+    width: 945px;
+    display: block;
+    margin-bottom: 25px;
+
+    @include vp-1199 {
+      font-size: 56px;
+      line-height: 56px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+      width: 320px;
+    }
+  }
+
+  p {
+    color: $color-default-white;
+    font-size: 17px;
+    line-height: 24px;
+    width: 410px;
+    margin: 0;
+    margin-bottom: 35px;
+
+    @include vp-1199 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 20px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+  .hero__button {
+    width: 180px;
+    display: block;
+    text-align: center;
+    margin-bottom: 134px;
+    border: 1px solid transparent;
+
+    @include vp-1199 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include hover-focus {
+      @media (hover: hover) {
+        &:hover:not(.focus-visible) {
+          border: 1px solid $color-navy-blue;
+          border-radius: 5px;
+          background-color: $color-default-white;
+          color: #1c3374;
+        }
+      }
+    }
+  }
+
+  .hero__info {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+
+    @include vp-1199 {
+      display: none;
+    }
+
+    div {
+      border: 1px solid $color-default-white;
+      padding: 14px 20px;
+      column-gap: 8px;
+      display: flex;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 16px;
+      color: $color-default-white;
+
+      svg {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .hero__video {
+    position: relative;
+    top: -399px;
+    left: 730px;
+    width: 482px;
+
+    @include vp-1199 {
+      width: 442px;
+      height: 300px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 45px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 482px;
+      height: 317px;
+
+      @include vp-1199 {
+        width: 265px;
+        height: 167px;
+      }
+
+      @include vp-767 {
+        left: 0;
+        top: 0;
+        width: 330px;
+        height: 167px;
+      }
+    }
+
+    img {
+      z-index: -2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    button {
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      top: 163px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      @include vp-1199 {
+        top: 145px;
+      }
+
+      @include hover-focus {
+        border: 1px solid #1c3374;
+      }
+
+      @include active {
+        background-color: #1c3374;
+      }
+
+
+      div {
+        position: absolute;
+        border: 9px solid transparent;
+        border-left: 15px solid $color-default-white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-5px, -50%);
+      }
+    }
+  }
+
+  .swiper-pagination {
+    width: 85px;
+    display: flex;
+    column-gap: 15px;
+    position: absolute;
+    align-items: start;
+    bottom: 85px;
+    left: 86%;
+
+    @include vp-1199 {
+      bottom: 40px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $color-default-white;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-default-white;
+    }
   }
 }
