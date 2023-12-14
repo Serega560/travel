@@ -1,6 +1,6 @@
-const container = document.querySelector('.video');
-const poster = document.querySelector('[data-poster]');
-const button = document.querySelector('[data-button]');
+const container = document.querySelector('.player');
+const poster = document.querySelector('[data-poster-player]');
+const button = document.querySelector('[data-button-player]');
 
 
 const createVideo = () => {

@@ -4,11 +4,16 @@
     overflow: hidden;
     position: relative;
     top: -133px;
+    left: 0;
+  }
+
+  .swiper-wrapper {
+    position: relative;
   }
 
   .swiper-slide {
-    padding: 184px 120px 80px;
-    min-height: 800px;
+    padding: 204px 120px 80px;
+    min-height: 830px;
 
     @include vp-767 {
       min-height: 568px;
@@ -20,6 +25,59 @@
 
       @include vp-1199 {
         width: 100%;
+      }
+
+      .hero__info {
+        display: flex;
+        column-gap: 10px;
+        flex-wrap: wrap;
+
+        @include vp-1199 {
+          display: none;
+        }
+
+        div {
+          border: 1px solid $color-default-white;
+          padding: 14px 20px;
+          column-gap: 8px;
+          display: flex;
+          align-items: center;
+        }
+
+        .hero__duration {
+          font-size: 12px;
+          line-height: 16px;
+          color: $color-default-white;
+
+          svg {
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+
+      h2 {
+        color: $color-default-white;
+        font-size: 77px;
+        line-height: 77px;
+        font-weight: 800;
+        width: 965px;
+        display: block;
+        margin-bottom: 25px;
+        letter-spacing: 1.19px;
+
+        @include vp-1199 {
+          font-size: 56px;
+          line-height: 56px;
+          width: 100%;
+          text-align: center;
+        }
+
+        @include vp-767 {
+          font-size: 26px;
+          line-height: 26px;
+          width: 320px;
+        }
       }
     }
 
@@ -45,36 +103,14 @@
     }
   }
 
-  .hero__slide-title {
-    color: $color-default-white;
-    font-size: 77px;
-    line-height: 77px;
-    font-weight: 800;
-    width: 945px;
-    display: block;
-    margin-bottom: 25px;
-
-    @include vp-1199 {
-      font-size: 56px;
-      line-height: 56px;
-      width: 100%;
-      text-align: center;
-    }
-
-    @include vp-767 {
-      font-size: 26px;
-      line-height: 26px;
-      width: 320px;
-    }
-  }
-
   p {
     color: $color-default-white;
     font-size: 17px;
     line-height: 24px;
-    width: 410px;
+    width: 440px;
     margin: 0;
     margin-bottom: 35px;
+    letter-spacing: 1.26px;
 
     @include vp-1199 {
       text-align: center;
@@ -103,49 +139,17 @@
     }
 
     @include hover-focus {
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          border: 1px solid $color-navy-blue;
-          border-radius: 5px;
-          background-color: $color-default-white;
-          color: #1c3374;
-        }
-      }
-    }
-  }
-
-  .hero__info {
-    display: flex;
-    column-gap: 10px;
-    flex-wrap: wrap;
-
-    @include vp-1199 {
-      display: none;
-    }
-
-    div {
-      border: 1px solid $color-default-white;
-      padding: 14px 20px;
-      column-gap: 8px;
-      display: flex;
-    }
-
-    span {
-      font-size: 12px;
-      line-height: 16px;
-      color: $color-default-white;
-
-      svg {
-        bottom: 0;
-        left: 0;
-      }
+      border: 1px solid $color-navy-blue;
+      border-radius: 5px;
+      background-color: $color-default-white;
+      color: #1c3374;
     }
   }
 
   .hero__video {
     position: relative;
-    top: -399px;
-    left: 730px;
+    top: -400px;
+    left: 718px;
     width: 482px;
 
     @include vp-1199 {
@@ -168,15 +172,8 @@
       height: 317px;
 
       @include vp-1199 {
-        width: 265px;
-        height: 167px;
-      }
-
-      @include vp-767 {
-        left: 0;
-        top: 0;
-        width: 330px;
-        height: 167px;
+        width: 442px;
+        height: 300px;
       }
     }
 
@@ -195,7 +192,7 @@
       width: 56px;
       height: 56px;
       position: absolute;
-      top: 163px;
+      top: 159px;
       left: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer;
@@ -212,14 +209,126 @@
         background-color: #1c3374;
       }
 
+      &:disabled {
+        border: 1px solid transparent;
+        pointer-events: none;
+
+        div {
+          border-left: 12px solid #0266C1;
+        }
+      }
 
       div {
         position: absolute;
-        border: 9px solid transparent;
-        border-left: 15px solid $color-default-white;
+        border: 11px solid transparent;
+        border-left: 12px solid $color-default-white;
         top: 50%;
-        left: 50%;
+        left: 53%;
         transform: translate(-5px, -50%);
+      }
+    }
+  }
+
+  .hero__img {
+    position: relative;
+    top: -537px;
+    left: 791px;
+    width: 410px;
+
+    img {
+      z-index: -2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @include vp-1199 {
+      width: 442px;
+      height: 300px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 45px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .hero__player {
+    position: relative;
+    top: -289px;
+    left: 867px;
+    width: 340px;
+
+    @include vp-1199 {
+      height: 220px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 45px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    button {
+      background-color: #102654;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      top: 156px;
+      left: 172px;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      div {
+        position: absolute;
+        border: 11px solid transparent;
+        border-left: 12px solid $color-default-white;
+        top: 50%;
+        left: 53%;
+        transform: translate(-5px, -50%);
+      }
+
+      @include hover-focus {
+        background-color: #007aff;
+      }
+
+      @include active {
+
+        background-color: $color-default-white;
+        border: 1px solid #102654;
+        div {
+          border: 9px solid transparent;
+          border-left: 10px solid #102654;
+        }
+      }
+
+      &[disabled] {
+        border: 1px solid #0266C1;
+        background-color: $color-default-white;
+        pointer-events: none;
+
+        div {
+          border-left: 12px solid #0266C1;
+        }
+      }
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 340px;
+      height: 220px;
+
+      @include vp-1199 {
+        width: 340px;
+        height: 220px;
       }
     }
   }
@@ -227,11 +336,11 @@
   .swiper-pagination {
     width: 85px;
     display: flex;
-    column-gap: 15px;
+    column-gap: 12px;
     position: absolute;
     align-items: start;
-    bottom: 85px;
-    left: 86%;
+    bottom: 300px;
+    left: 1278px;
 
     @include vp-1199 {
       bottom: 40px;

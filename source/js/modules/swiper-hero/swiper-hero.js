@@ -5,7 +5,7 @@ const initSwiperHero = () => {
 
     // Параметры
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     effect: 'slider',
     slidesPerView: 1,
 

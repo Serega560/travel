@@ -2,6 +2,10 @@ import {iosVhFix} from './utils/ios-vh-fix';
 // import {Form} from './modules/form-validate/form';
 import {initSwiperHero} from "./modules/swiper-hero/swiper-hero.js";
 import {initVideo} from "./modules/video.js";
+import {initPlayer} from "./modules/player.js";
+import {initSwiperTours} from "./modules/swiper-tours/swiper-tours.js";
+import {initSwiperTraining} from "./modules/swiper-training/swiper-training.js";
+import {initSwiperReviews} from "./modules/swiper-reviews/swiper-reviews.js";
 
 // ---------------------------------
 
@@ -23,6 +27,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // form.init();
     initSwiperHero();
     initVideo();
+    initPlayer();
+    initSwiperTours();
+    initSwiperTraining();
+    initSwiperReviews();
 
     const header = document.querySelector('.header');
     const button = header.querySelector('.header__burger');
