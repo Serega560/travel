@@ -1,7 +1,13 @@
 
 const baseSuccessCallback = (event) => {
   event.preventDefault();
-  // В данном колбеке бэкендер, либо разработчик при необходимости будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки или успешную отправку формы на сервер
+  const path = 'https://echo.htmlacademy.ru/'
+  const form = document.querySelector('[data-form="form"]');
+
+  fetch(path, {
+    method:'POST',
+    body: new FormData(form),
+  })
 };
 
 const baseErrorCallback = (event) => {
