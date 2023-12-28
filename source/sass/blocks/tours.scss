@@ -1,0 +1,371 @@
+.tours {
+  padding-bottom: 109px;
+  position: relative;
+  padding-top: 108px;
+
+  @include vp-1199 {
+    padding-bottom: 54px;
+    padding-top: 53px;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
+    padding-top: 33px;
+    padding-bottom: 29px;
+  }
+
+  h2 {
+    padding-top: 3px;
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+
+  .tours__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 602px;
+    height: 1630px;
+    z-index: 0;
+
+    @include vp-1199 {
+      z-index: -1;
+    }
+
+    @include vp-767 {
+      width: 171px;
+      height: 595px;
+      top: 110px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include vp-767 {
+        width: 346px;
+        height: 595px;
+      }
+    }
+  }
+
+  .container {
+    overflow: hidden;
+    width: 1200px;
+    padding: 0;
+    padding-top: 12px;
+
+    @include vp-1199 {
+      width: 678px;
+    }
+
+    @include vp-767 {
+      width: 320px;
+      margin-top: 10px;
+      overflow: visible;
+    }
+  }
+
+  a {
+    color: #2d383f;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    justify-content: center;
+    letter-spacing: 0.61px;
+
+
+    @include hover-focus {
+      color: #1c3374;
+
+      svg {
+        color: 1c3374;
+      }
+    }
+
+    @include active {
+      color: #0266c1;
+
+      svg {
+        color: #0266c1;
+      }
+    }
+
+    &[disabled] {
+      color: #0266c1;
+      pointer-events: none;
+
+      svg {
+        color: #0266c120;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    p {
+      margin: 0;
+      margin-left: 3px;
+    }
+  }
+
+  .swiper-container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 64px;
+
+    @include vp-1199 {
+      padding-top: 22px;
+      padding-bottom: 36px;
+    }
+
+    @include vp-767 {
+      padding-top: 23px;
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+
+    img {
+      @include vp-1199 {
+        min-height: 416px;
+      }
+    }
+
+    .tours__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 30px 3px 28px 20px;
+      display: flex;
+      row-gap: 15px;
+      flex-direction: column;
+
+      .tours__location-info {
+        display: flex;
+      }
+
+      .tours__location {
+        display: flex;
+        background-color: #0266c1;
+        column-gap: 6px;
+        margin-right: 95px;
+        align-items: center;
+        padding: 6px 13px 6px 12px;
+
+        @include vp-1199 {
+          margin-right: 45px;
+        }
+
+        @include vp-767 {
+          margin-right: 35px;
+        }
+
+        p {
+          color: $color-default-white;
+          margin: 0;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .tours__location--mr-right {
+        padding: 6px 14px 6px 12px;
+        margin-right: 75px;
+
+        @include vp-1199 {
+          margin-right: 25px;
+        }
+      }
+
+      .tours__info {
+        display: flex;
+        column-gap: 15px;
+
+        div {
+          display: flex;
+          column-gap: 12px;
+          align-items: center;
+        }
+
+        span {
+          color: $color-default-white;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .tours__complexitys {
+        display: flex;
+        column-gap: 52px;
+
+        @include vp-1199 {
+          column-gap: 27px;
+        }
+
+        @include vp-767 {
+          column-gap: 23px;
+        }
+      }
+
+      .tours__complexity {
+        display: flex;
+        row-gap: 7px;
+        flex-direction: column;
+        position: relative;
+        padding-top: 15px;
+        width: 84px;
+      }
+
+      .tours__complexity:first-child {
+        row-gap: 4px;
+      }
+
+      .tours__complexity:first-child::before {
+        position: absolute;
+        content: "";
+        top: -1px;
+        width: 80px;
+        height: 1px;
+        background-color: $color-default-white;
+      }
+
+      .tours__title {
+        margin: 0;
+        color: $color-default-white;
+        width: 250px;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        padding-top: 1px;
+      }
+
+      dl {
+        margin: 0;
+        color: $color-default-white;
+      }
+
+      dt {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 300;
+      }
+
+      dd {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        line-height: 13px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.swiper-slider__arrow[data-swiper-button-prev="tours"] {
+  position: absolute;
+  width: 37px;
+  height: 35px;
+  top: -38px;
+  right: 41px;
+  cursor: pointer;
+  border: none;
+  background: #0266c1;
+  transform: rotate(180deg);
+
+  svg {
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    top: -38px;
+  }
+
+  @include vp-767 {
+    top: -37px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border: 1px solid #1c3374;
+
+    svg {
+      color: #1c3374;
+    }
+  }
+
+  @include active {
+    background-color: #1c3374;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  &[disabled] {
+    background-color: #999999;
+    pointer-events: none;
+  }
+}
+
+
+.swiper-slider__arrow[data-swiper-button-next="tours"] {
+  position: absolute;
+  width: 37px;
+  height: 35px;
+  top: -38px;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  background: #0266c1;
+  transition: color 0.5s ease-in;
+
+  svg {
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    top: -38px;
+  }
+
+  @include vp-767 {
+    top: -37px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border: 1px solid #1c3374;
+
+    svg {
+      color: #1c3374;
+    }
+  }
+
+  @include active {
+    background-color: #1c3374;
+
+    svg {
+      color: $color-default-white;
+    }
+
+    &::before {
+      background-color: #102654;
+    }
+  }
+
+  &[disabled] {
+    background-color: #999999;
+    pointer-events: none;
+  }
+}
+

@@ -1,0 +1,283 @@
+.reviews {
+  padding-top: 53px;
+  padding-bottom: 3px;
+
+  @include vp-1199 {
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 41px;
+    padding-bottom: 18px;
+  }
+
+  .reviews__container {
+    position: relative;
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+
+    @include vp-1199 {
+      margin-bottom: 49px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+      padding-left: 15px;
+    }
+  }
+
+  .swiper-container {
+    padding: 10px 0 10px 10px;
+    overflow: hidden;
+
+    @include vp-1199 {
+      width: 678px;
+      padding: 10px 0 10px 8px;
+    }
+
+    @include vp-767 {
+      width: 350px;
+      padding: 15px;
+    }
+  }
+
+  .reviews__item {
+    min-width: 700px;
+    max-width: 700px;
+    padding: 17px;
+    display: flex;
+    column-gap: 30px;
+    box-shadow: -1px -1px 6px #0266c160;
+
+    @include vp-1199 {
+      min-width: 555px;
+      max-width: 555px;
+      padding: 17px 9px;
+    }
+
+    @include vp-767 {
+      flex-wrap: wrap;
+      min-width: 320px;
+      max-width: 320px;
+      padding: 17px 19px 17px 20px;
+      box-shadow: -1px -1px 3px #0266c160;
+    }
+
+    img {
+      max-width: 258px;
+      height: 253px;
+      object-fit: cover;
+
+      @include vp-1199 {
+        width: 186px;
+        height: 237px;
+      }
+
+      @include vp-767 {
+        max-width: 280px;
+        width: 280px;
+        height: 169px;
+      }
+    }
+
+
+    .reviews__man-description {
+      margin-top: -2px;
+
+      @include vp-1199 {
+        margin-top: 4px;
+      }
+
+      @include vp-767 {
+        margin-top: 19px;
+      }
+    }
+
+    .reviews__description {
+      margin-bottom: 14px;
+
+      @include vp-1199 {
+        margin-bottom: 26px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0;
+      width: 351px;
+
+      @include vp-1199 {
+        width: 299px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      @include vp-767 {
+        width: 270px;
+      }
+    }
+
+    p:first-child {
+      @include vp-1199 {
+        margin-bottom: 10px;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 300;
+      display: block;
+    }
+
+    span:first-child {
+      margin-bottom: 9px;
+      font-weight: 700;
+      font-size: 13px;
+
+      @include vp-1199 {
+        margin-bottom: 7px;
+      }
+
+      @include vp-767 {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .reviews__item--left {
+    @include vp-1199 {
+      padding: 17px 19px;
+    }
+  }
+}
+
+
+// Кнопки
+
+.swiper-slider__arrow[data-swiper-button-prev="reviews"] {
+  position: absolute;
+  width: 37px;
+  height: 35px;
+  top: -13px;
+  right: 161px;
+  cursor: pointer;
+  border: none;
+  background: #0266c1;
+  transform: rotate(180deg);
+
+  span {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    top: -11px;
+    right: 86px;
+  }
+
+  @include vp-767 {
+    right: 56px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border: 1px solid #1c3374;
+
+    svg {
+      color: #1c3374;
+    }
+  }
+
+  @include active {
+    background-color: #1c3374;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  &[disabled] {
+    background-color: #999999;
+    pointer-events: none;
+  }
+}
+
+
+.swiper-slider__arrow[data-swiper-button-next="reviews"] {
+  position: absolute;
+  width: 37px;
+  height: 35px;
+  top: -13px;
+  right: 120px;
+  cursor: pointer;
+  border: none;
+  background: #0266c1;
+  transition: color 0.5s ease-in;
+
+
+  span {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    top: -11px;
+    right: 45px;
+  }
+
+  @include vp-767 {
+    right: 15px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border: 1px solid #1c3374;
+
+    svg {
+      color: #1c3374;
+    }
+  }
+
+  @include active {
+    background-color: #1c3374;
+
+    svg {
+      color: $color-default-white;
+    }
+
+    &::before {
+      background-color: #102654;
+    }
+  }
+
+  &[disabled] {
+    background-color: #999999;
+    pointer-events: none;
+  }
+}

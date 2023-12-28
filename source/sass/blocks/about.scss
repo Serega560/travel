@@ -1,0 +1,139 @@
+.about {
+  max-width: 2200px;
+  min-height: 530px;
+
+  @include vp-1199 {
+    padding-top: 20px;
+    padding-bottom: 2px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+    padding-bottom: 1px;
+  }
+
+  .about__container {
+    position: relative;
+    max-width: 2200px;
+  }
+
+  .about__block {
+    display: flex;
+    flex-direction: row;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+
+    .about__img {
+      width: 808px;
+      height: 474px;
+      position: absolute;
+      z-index: -1;
+      top: 56px;
+      left: 0;
+
+      @include vp-1199 {
+        width: 542px;
+        height: 350px;
+        top: 40px;
+      }
+
+      @include vp-767 {
+        position: static;
+        width: 350px;
+        height: 400px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+      }
+    }
+
+    div {
+      margin-right: 115px;
+      margin-left: auto;
+      padding-top: 79px;
+
+      @include vp-1199 {
+        margin-right: 45px;
+        padding-top: 0;
+        margin-top: -2px;
+      }
+
+      @include vp-767 {
+        margin: 0;
+        padding-top: 7px;
+        padding-left: 15px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 56px;
+
+      @include vp-1199 {
+        margin-bottom: 35px;
+        padding-left: 6px;
+      }
+
+      @include vp-767 {
+        margin-left: 0;
+        margin-bottom: 25px;
+        padding: 0;
+      }
+    }
+
+    ul {
+      width: 590px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 29px;
+
+      @include vp-1199 {
+        width: 270px;
+      }
+
+      @include vp-767 {
+        margin: 0;
+        width: 320px;
+        row-gap: 27px;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 21px;
+
+        @include vp-1199 {
+          font-size: 18px;
+          line-height: 18px;
+          margin-bottom: 11px;
+        }
+
+        @include vp-767 {
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 13px;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 22px;
+
+        @include vp-767 {
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
