@@ -66,7 +66,6 @@
     display: grid;
     grid-template-columns: repeat(14, 275px 298px);
     grid-template-rows: 179px 263px;
-    row-gap: 5px;
     column-gap: 4px;
     margin-bottom: 3px;
 
@@ -81,42 +80,21 @@
       grid-template-columns: repeat(14, 158px);
       grid-template-rows: 100px 156px;
       column-gap: 4px;
-      row-gap: 4px;
       overflow: hidden;
     }
   }
 
-  .gallery__item--1 {
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
+  .gallery__item--two {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
 
-  .gallery__item--3 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .gallery__item--4 {
-    img {
-      height: 449px;
-      width: 298px;
+    @include vp-767 {
+      row-gap: 4px;
     }
   }
 
-  .gallery__item--6 {
-    grid-column: 4/5;
-    grid-row: 2/3;
-  }
 
-  .gallery__item--9 {
-    grid-column: 6/7;
-    grid-row: 2/3;
-  }
-
-  .gallery__item--13 {
-    grid-column: 8/9;
-    grid-row: 2/3;
-  }
 }
 
 // Кнопки
