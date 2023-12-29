@@ -64,23 +64,24 @@
 
   .gallery__list {
     display: grid;
-    grid-template-columns: repeat(14, 275px 298px);
+    grid-template-columns: repeat(21, 275px 298px);
     grid-template-rows: 181px 266px;
     column-gap: 4px;
     margin-bottom: 3px;
 
     @include vp-1199 {
-      grid-template-columns: repeat(14, 252px);
+      grid-template-columns: repeat(21, 252px);
       grid-template-rows: 181px 266px;
       column-gap: 6px;
       margin-bottom: 2px;
     }
 
     @include vp-767 {
-      grid-template-columns: repeat(14, 158px);
-      grid-template-rows: 100px 156px;
+      grid-template-columns: repeat(21, 158px);
+      grid-template-rows: 102px 158px;
       column-gap: 4px;
       overflow: hidden;
+      margin-bottom: 0;
     }
   }
 
@@ -88,14 +89,15 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 5px;
-    padding-right: 1px;
+
+    @include vp-1199 {
+      row-gap: 6px;
+    }
 
     @include vp-767 {
       row-gap: 4px;
     }
   }
-
-
 }
 
 // Кнопки
