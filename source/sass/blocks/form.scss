@@ -39,24 +39,22 @@
 
   .form__block {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     padding-top: 297px;
     position: absolute;
     z-index: 2;
-    padding-left: 238px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 965px;
 
     @include vp-1199 {
       padding-right: 0;
       padding-top: 190px;
-      padding-left: 222px;
     }
 
     @include vp-767 {
       padding-top: 175px;
-      padding-left: 26px;
-      transform: translateX(0%);
     }
   }
 
